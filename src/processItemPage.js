@@ -5,7 +5,7 @@ function processItemPage({ config, data }) {
   const realmId = /realm_id=(\d+)/.exec(config.url)[1];
   const $ = cheerio.load(data);
   const heading = $('td[width="800"]').find('b').text();
-  const chunks = /([A-Z ()]+) \(Min Level: (\d+)\)/.exec(heading);
+  const chunks = /(.+) \(Min Level: (\d+)\)/.exec(heading);
   const realmName = chunks[1];
   const level = chunks[2];
   $('.tHeader:contains(Creatures)')
