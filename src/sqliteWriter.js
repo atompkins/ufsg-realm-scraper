@@ -11,6 +11,7 @@ function createTable() {
     , creature_id      integer not null
     , creature_name    text    null
     , creature_class   text    null
+    , lastSeen         datetime null
     , primary key      (realm_id, creature_id)
   )`);
 }
@@ -23,6 +24,7 @@ function prepareStmt() {
     , creature_id
     , creature_name
     , creature_class
+    , lastSeen
   )
   VALUES (
       ?
@@ -31,6 +33,7 @@ function prepareStmt() {
     , ?
     , ?
     , ?
+    , current_timestamp
   )`);
 }
 

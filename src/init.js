@@ -8,6 +8,7 @@ async function getItems(url) {
   const response = await getPage(url);
   const { nextPageLabel, nextPageUrl } = await processIndexPage(response);
   if (nextPageLabel && nextPageLabel !== 'Last') { // Last
+    console.log(nextPageLabel);
     return getItems(nextPageUrl);
   }
   return false;
