@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "UFSG Realm Scraper - guide.fallensword.com",
   "engines": {
-    "node": "20.x"
+    "node": "16.x"
   },
   "main": "scraper.js",
   "scripts": {
