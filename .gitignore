@@ -105,3 +105,6 @@ dist
 
 # scraper output files
 data.sqlite
+
+# macos bs
+.DS_Store
